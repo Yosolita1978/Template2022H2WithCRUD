@@ -21,7 +21,7 @@ function App() {
       <div className="container flex-grow-1">
       {!user ? <a>Hello from Techtonica</a> : <a>Hello, {user.name}</a> }
       <Routes>
-      <Route path="/" element={<Students/>} />
+      <Route path="/" element={<Students user={user}/>} />
       </Routes>
       </div>
     </div>
