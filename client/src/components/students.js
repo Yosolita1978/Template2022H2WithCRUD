@@ -11,7 +11,7 @@ function Students(props) {
 
   const loadStudents = () =>{
     // A function to fetch the list of students that will be load anytime that list change
-    fetch("http://localhost:8080/api/students")
+    fetch("/api/students")
       .then((response) => response.json())
       .then((students) => {
             setStudents(students);
@@ -24,7 +24,7 @@ function Students(props) {
 
   //A function to handle the Delete funtionality
   const onDelete = (student) =>{
-    return fetch(`http://localhost:8080/api/students/${student.id}`, {
+    return fetch(`/api/students/${student.id}`, {
       method: "DELETE"
     }).then((response) => {
       //console.log(response);
